@@ -132,7 +132,7 @@ class CSEvaluator:
         intent_acc = accuracy_score(intents_true, intents_pred)
 
         log.info({
-            "rougeL": rouge_result["rougeL"].mid.fmeasure,
+            "rougeL": rouge_result["rougeL"],
             "bleu": bleu_result["bleu"],
             "bertscore_f1": sum(bert_result["f1"]) / len(bert_result["f1"]),
             "intent_accuracy": intent_acc
